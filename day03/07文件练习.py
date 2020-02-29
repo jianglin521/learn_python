@@ -8,7 +8,7 @@ for each_line in f:
   if each_line[:6] != '======':
     # 我们这里进行字符串分割
     # print(each_line, '1111')
-    (role, line_spoken) = each_line.split(' ', 1)
+    (role, line_spoken) = each_line.split(':', 1)
     if role == '小甲鱼':
       boy.append(line_spoken)
     if role == '小客服':
@@ -29,7 +29,7 @@ for each_line in f:
 
     boy = []
     girl = []
-    #count += 1
+    count += 1
 
 # 关闭文件
 f.close()
