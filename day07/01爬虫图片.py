@@ -1,3 +1,4 @@
+# 需要安装requests库
 import requests
 import os
 url = 'http://bpic.588ku.com//back_origin_min_pic/19/11/27/b68eff8c0c23d0e15e0e6e87bdbb4e0a.jpg'
