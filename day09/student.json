@@ -1,176 +1,38 @@
 [
   {
-    "id": 20,
-    "name": "壮壮1",
-    "title": "标题1",
-    "remark": "备注1"
-  },
-  {
-    "id": 21,
-    "name": "壮壮2",
-    "title": "标题2",
-    "remark": "备注2"
-  },
-  {
-    "id": 22,
-    "name": "壮壮3",
-    "title": "标题3",
-    "remark": "备注3"
-  },
-  {
-    "id": 23,
-    "name": "壮壮4",
-    "title": "标题4",
-    "remark": "备注4"
-  },
-  {
-    "id": 24,
-    "name": "壮壮5",
-    "title": "标题5",
-    "remark": "备注5"
-  },
-  {
-    "id": 25,
-    "name": "壮壮6",
-    "title": "标题6",
-    "remark": "备注6"
-  },
-  {
-    "id": 26,
-    "name": "壮壮7",
-    "title": "标题7",
-    "remark": "备注7"
-  },
-  {
-    "id": 27,
-    "name": "壮壮8",
-    "title": "标题8",
-    "remark": "备注8"
-  },
-  {
-    "id": 28,
-    "name": "壮壮9",
-    "title": "标题9",
-    "remark": "备注9"
-  },
-  {
-    "id": 29,
-    "name": "壮壮10",
-    "title": "标题10",
-    "remark": "备注10"
-  },
-  {
-    "id": 30,
-    "name": "壮壮11",
-    "title": "标题11",
-    "remark": "备注11"
-  },
-  {
-    "id": 31,
-    "name": "壮壮12",
-    "title": "标题12",
-    "remark": "备注12"
-  },
-  {
-    "id": 32,
-    "name": "壮壮13",
-    "title": "标题13",
-    "remark": "备注13"
-  },
-  {
-    "id": 33,
-    "name": "壮壮14",
-    "title": "标题14",
-    "remark": "备注14"
-  },
-  {
-    "id": 34,
-    "name": "壮壮15",
-    "title": "标题15",
-    "remark": "备注15"
-  },
-  {
-    "id": 35,
-    "name": "壮壮16",
-    "title": "标题16",
-    "remark": "备注16"
-  },
-  {
-    "id": 36,
-    "name": "壮壮17",
-    "title": "标题17",
-    "remark": "备注17"
-  },
-  {
-    "id": 37,
-    "name": "壮壮18",
-    "title": "标题18",
-    "remark": "备注18"
-  },
-  {
-    "id": 38,
-    "name": "壮壮19",
-    "title": "标题19",
-    "remark": "备注19"
-  },
-  {
-    "id": 39,
-    "name": "壮壮20",
-    "title": "标题20",
-    "remark": "备注20"
-  },
-  {
-    "id": 40,
-    "name": "壮壮21",
-    "title": "标题21",
-    "remark": "备注21"
-  },
-  {
-    "id": 41,
-    "name": "壮壮22",
-    "title": "标题22",
-    "remark": "备注22"
-  },
-  {
-    "id": 42,
-    "name": "壮壮23",
-    "title": "标题23",
-    "remark": "备注23"
-  },
-  {
-    "id": 43,
-    "name": "壮壮24",
-    "title": "标题24",
-    "remark": "备注24"
-  },
-  {
-    "id": 44,
-    "name": "壮壮25",
-    "title": "标题25",
-    "remark": "备注25"
-  },
-  {
     "id": 45,
-    "name": "壮壮26",
-    "title": "标题26",
-    "remark": "备注26"
+    "category": "经管类",
+    "system": "经营管理",
+    "img": "/course/item45.png"
   },
   {
     "id": 46,
-    "name": "壮壮27",
-    "title": "标题27",
-    "remark": "备注27"
+    "category": "经管类",
+    "system": "经营管理",
+    "img": "/course/item46.png"
   },
   {
     "id": 47,
-    "name": "壮壮28",
-    "title": "标题28",
-    "remark": "备注28"
+    "category": "税务类",
+    "system": "税务管理",
+    "img": "/course/item47.png"
   },
   {
     "id": 48,
-    "name": "壮壮29",
-    "title": "标题29",
-    "remark": "备注29"
+    "category": "税务类",
+    "system": "税种及政策",
+    "img": "/course/item48.png"
+  },
+  {
+    "id": 49,
+    "category": "经管类",
+    "system": "经营管理",
+    "img": "/course/item49.png"
+  },
+  {
+    "id": 50,
+    "category": "税务类",
+    "system": "税务管理",
+    "img": "/course/item50.png"
   }
 ]
