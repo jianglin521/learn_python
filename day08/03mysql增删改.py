@@ -1,5 +1,5 @@
 import pymysql
-import pandas as pd
+# import pandas as pd
 
 # 使用pymysql连接上mysql数据库服务器，创建了一个数据库对象；
 db = pymysql.connect(
@@ -7,7 +7,7 @@ db = pymysql.connect(
   user='root',
   password='123456',
   port=3306,
-  db='python_test',
+  db='test',
   charset='utf8mb4'
 )
 
@@ -15,15 +15,15 @@ db = pymysql.connect(
 cursor = db.cursor()
 
 # 1.一次性插入一条数据
-# sql = 'insert into person(name,age) values(%s,%s)'
-# try:
-#     cursor.execute(sql,('孙悟空',10))
-#     db.commit()
-#     print("插入成功")
-# except:
-#     print("插入失败")
-#     db.rollback()
-# db.close()
+sql = 'insert into guan_test(id,title) values(%s,%s)'
+try:
+    cursor.execute(sql,(1,'添加测试'))
+    db.commit()
+    print("插入成功")
+except:
+    print("插入失败")
+    db.rollback()
+db.close()
 
 # 2.一次性插入多条数据
 # sql = 'insert into person(name,age) values(%s,%s)'
@@ -51,12 +51,12 @@ cursor = db.cursor()
 # db.close()
 
 # 4.删除数据
-sql = 'delete from person where age=8000'
-try:
-    cursor.execute(sql)
-    db.commit()
-    print("删除成功")
-except:
-    print("删除失败")
-    db.rollback()
-db.close()
+# sql = 'delete from person where age=8000'
+# try:
+#     cursor.execute(sql)
+#     db.commit()
+#     print("删除成功")
+# except:
+#     print("删除失败")
+#     db.rollback()
+# db.close()
