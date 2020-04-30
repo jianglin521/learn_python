@@ -1,21 +1,21 @@
 import requests
 import parsel
 import time
-import pymysql
+# import pymysql
 
 
-# 使用pymysql连接上mysql数据库服务器，创建了一个数据库对象；
-db = pymysql.connect(
-    host='localhost',
-    user='root',
-    password='123456',
-    port=3306,
-    db='py_test',
-    charset='utf8mb4'
-)
+# # 使用pymysql连接上mysql数据库服务器，创建了一个数据库对象；
+# db = pymysql.connect(
+#     host='localhost',
+#     user='root',
+#     password='123456',
+#     port=3306,
+#     db='py_test',
+#     charset='utf8mb4'
+# )
 
-# 开启mysql的游标功能，创建一个游标对象；              
-cursor = db.cursor()
+# # 开启mysql的游标功能，创建一个游标对象；              
+# cursor = db.cursor()
 
 # 检测代理ip
 # def check_ip(proxies_list):
@@ -35,7 +35,7 @@ cursor = db.cursor()
 # 获取到的列表
 def get_ip():
   proxies_list = []
-  for page in range(1, 300):
+  for page in range(1, 100):
     print('=========正在爬取第{}页数据========='.format(page))
     # 1.确定url,hearer
     base_url = 'https://www.kuaidaili.com/free/inha/{}/'.format(str(page))
@@ -53,12 +53,16 @@ def get_ip():
     pase_list = html_data.xpath("//table[@class='table table-bordered table-striped']/tbody/tr")
 
     # print(pase_list)
-    for tr in pase_list:
-      proxies_dict = {}
-      http_type = tr.xpath("./td[4]/text()").extract_first()
-      ip_num = tr.xpath("./td[1]/text()").extract_first()
-      ip_port = tr.xpath("./td[2]/text()").extract_first()
-      save_ip(http_type, ip_num, ip_port) # 保存ip
+    with open('aaa.txt', 'w') as f:
+      for tr in pase_list:
+        proxies_dict = {}
+        http_type = tr.xpath("./td[4]/text()").extract_first()
+        ip_num = tr.xpath("./td[1]/text()").extract_first()
+        ip_port = tr.xpath("./td[2]/text()").extract_first()
+        http = 'http://{0}:{1}'.format(ip_num, ip_port)
+        f.write(http + '\n')
+      
+      # save_ip(http_type, ip_num, ip_port) # 保存ip
       # print(http_type, ip_num, ip_port)
       # 构建代理ip的字典
       # proxies_dict[http_type] = ip_num + ':' + ip_port
@@ -69,22 +73,25 @@ def get_ip():
   # print(proxies_list)
   # print('获取到代理ip的数量', len(proxies_list))
 
+
+
+
 # 保存ip
-def save_ip(http_type, ip_num, ip_port):
-  sql = 'insert into ip_save(http_type, ip_num, ip_port) values(%s,%s, %s)'
-  try:
-      cursor.execute(sql,(http_type, ip_num, ip_port))
-      db.commit()
-      print("插入成功")
-  except:
-      print("插入失败")
-      db.rollback()
+# def save_ip(http_type, ip_num, ip_port):
+#   sql = 'insert into ip_save(http_type, ip_num, ip_port) values(%s,%s, %s)'
+#   try:
+#       cursor.execute(sql,(http_type, ip_num, ip_port))
+#       db.commit()
+#       print("插入成功")
+#   except:
+#       print("插入失败")
+#       db.rollback()
 # 获取ip
 get_ip()
 
 # 关闭数据库
-db.close()
-cursor.close()
+# db.close()
+# cursor.close()
 # 检测代理ip
 # can_use = check_ip(proxies_list)
 # print('能用的代理ip', can_use)
