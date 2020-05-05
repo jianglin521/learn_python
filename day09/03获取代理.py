@@ -4,6 +4,7 @@
 import pymysql
 import requests
 from scrapy.selector import Selector
+import time
 
 connect = pymysql.connect(host='127.0.0.1', user='root', passwd='123456',
                           db='py_test', charset='utf8')
@@ -21,10 +22,10 @@ class GetIP(object):
         headers = {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36'
         }
-        test_http_url = "https://www.aqistudy.cn/historydata/"
+        test_http_url = "https://11maoww.com/vodtype/34-41.html"
 
         try:
-            response = requests.get(test_http_url, headers=headers, proxies=proxy, timeout=0.1)
+            response = requests.get(test_http_url, headers=headers, proxies=proxy, timeout=0.2)
             print(response.status_code, '-------------------------------')
         except Exception as e:
             print("jugeg_ip exception: ", e)
@@ -112,7 +113,8 @@ def crawl_ips():
     page_number = selector.xpath('//a[last()-1]/text()').extract_first()  # 获取总页数
     page_numbers = int(selector.xpath('//a[last()-1]/text()').extract_first())
 
-    for i in range(1, 2):
+    for i in range(10, 1000):
+        time.sleep(10)
         # if i == 1:
         #     response = res
         response = requests.get(url+str(i), headers=headers, proxies=proxy)
