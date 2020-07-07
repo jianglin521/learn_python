@@ -6,7 +6,7 @@ import random
 import os
 from lxml import etree
 
-class CrmSpider():
+class JianShuSpider():
     def __init__(self):
         self.base_url = 'https://www.jianshu.com'
         self.url = 'https://www.jianshu.com/'
@@ -85,5 +85,5 @@ class CrmSpider():
             time.sleep(time_sleep)
 
 if __name__ == '__main__':
-    spider = CrmSpider()
+    spider = JianShuSpider()
     spider.run()
