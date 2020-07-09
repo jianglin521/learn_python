@@ -16,6 +16,7 @@ class JianShuSpider():
             'Cookie': '__yadk_uid=H4y0h2EAqQrtASfsSw5tCOOVhivLlglP; _ga=GA1.2.501903876.1593673082; _gid=GA1.2.1287963103.1593673082; _m7e_session_core=287332e2a1c8b6d8cfbde480d473b286; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%221730e2d6369250-020c3967c3c108-594d2a16-2073600-1730e2d636a3b8%22%2C%22%24device_id%22%3A%221730e2d6369250-020c3967c3c108-594d2a16-2073600-1730e2d636a3b8%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E8%87%AA%E7%84%B6%E6%90%9C%E7%B4%A2%E6%B5%81%E9%87%8F%22%2C%22%24latest_referrer%22%3A%22https%3A%2F%2Fwww.baidu.com%2Flink%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC%22%2C%22%24latest_referrer_host%22%3A%22www.baidu.com%22%7D%7D; signin_redirect=https%3A%2F%2Fwww.jianshu.com%2F; read_mode=day; default_font=font2; locale=zh-CN; Hm_lvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1593678405,1593739650,1593745619,1593747778; Hm_lpvt_0c0e9d9b1e7d617b3e6842e85b9fb068=1593747778'
         }
 
+
 	# 获取首页
     def get_url_list(self):
         url_list = []
