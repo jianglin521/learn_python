@@ -22,7 +22,7 @@ class GetIP(object):
         headers = {
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36'
         }
-        test_http_url = "https://11maoww.com/vodtype/34-41.html"
+        test_http_url = "http://www.baidu.com" # 检测ip
 
         try:
             response = requests.get(test_http_url, headers=headers, proxies=proxy, timeout=0.2)
