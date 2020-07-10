@@ -65,12 +65,12 @@ class ZhiHuSpider():
         for item in list_item:
             # index = list_item.index(item)
             name = str(item.xpath("./div/div[@class='ContentItem-meta']//a/text()"))
-            content = content + name + '----------\n\n'
+            content = content + name + '------------\n\n'
             article = item.xpath("./div//p/text()")
             print(article)
             for p in article:
                 content = content + p + '\n\n'
-        self.save_items(url, title, content)
+        self.save_items(url, title, content) # 保存数据库
         # article = html.xpath("//div//p/text()")
         if (not os.path.exists('./知乎')):
             os.makedirs('./知乎') 
