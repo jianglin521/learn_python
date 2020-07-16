@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import requests
 import os
 from concurrent.futures import ThreadPoolExecutor, wait
@@ -79,10 +81,7 @@ def downloader(url, name, threadNum):
             elif content[index + 1][:4] == 'http':
                 downloadLink = content[index + 1]
             else:
-                # print(url, '444444')
-                # print(url.split('/')[-1], content[index + 1], '333')
                 downloadLink = url.replace(url.split('/')[-1], content[index + 1])
-                # print(downloadLink, '77777777')
             urls.append(downloadLink)
     allNum = len(urls)
 
@@ -91,7 +90,6 @@ def downloader(url, name, threadNum):
     futures = []
     for index, downloadLink in enumerate(urls):
         # fileList.append(os.path.basename(downloadLink))
-        print(os.path.basename(str(index)), index, '77')
         fileList.append(os.path.basename(str(index) + '.ts'))
         futures.append(pool.submit(download, downloadLink, f"{downloadPath}/{os.path.basename(str(index) + '.ts')}"))
     wait(futures)
@@ -102,10 +100,8 @@ def downloader(url, name, threadNum):
 
 
 if __name__ == '__main__':
-    # videoUrl = 'http://1301420422.vod2.myqcloud.com/b0fb9dfdvodtranscq1301420422/adf1d1055285890800205183664/v.f220.m3u8'
-    # name = '123.mp4'
-    # threadNum = 1
+    threadNum = 20
     videoUrl = str(sys.argv[1])
     name = str(sys.argv[2])
-    threadNum = int(sys.argv[3])
+    # threadNum = int(sys.argv[3])
     downloader(videoUrl, name, threadNum)
