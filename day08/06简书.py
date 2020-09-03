@@ -48,13 +48,14 @@ class JianShuSpider():
         html = etree.HTML(html.text)
         title = html.xpath("//section/h1/text()")[0] 
         article = html.xpath('//section/article/p/text()')
-        print(title, article)
+        # print(title, article)
         if (not os.path.exists('./简书')):
             os.makedirs('./简书') 
         title = title.replace('|', '') # 删除标题特殊字符    
         with open('./简书/{0}{1}.txt'.format(index,title), 'w', encoding='utf-8') as f:
             content = title + '\n\n'
             for p in article:
+                print(p)
                 content = content + p + '\n\n'
             f.write(content) 
     # def save_items(self, data, index):

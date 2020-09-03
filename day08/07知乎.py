@@ -20,7 +20,7 @@ class ZhiHuSpider():
         self.headers = {
             'X-INFINITESCROLL': 'true',
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
-            'Cookie': '_zap=24eb86d7-3a80-4f4e-aea8-2e9a9bf04887; d_c0="AAAbcLPDiRGPTo5ABej3BkuCDiznrsxFGSE=|1594082992"; _ga=GA1.2.749585512.1594082993; _gid=GA1.2.743102147.1594082993; ISSW=1; _xsrf=SitTm4E7Lwc3FfD9cnDAeRPECt92fDQM; l_n_c=1; r_cap_id="MDhhMTU3ZDRmMTM4NDBmNTkzMDliNWVhMjgxZDFjODU=|1594085860|b46e6981832089f73a981fde1a887f51cfb15e17"; cap_id="M2YwZWQwY2Q3MTI1NDg2YmFjODE0NzBlZWVmZTY2MTI=|1594085859|8086d8e6552010c149bfdf0b392c765740f7a04b"; l_cap_id="NzQ3NGY1Y2IzYjA2NGU1MGEwM2U5YmM1NmViMzZhOTI=|1594085860|effe42116b39b93d5fa817fc39606dc5dcda6e41"; n_c=1; atoken_expired_in=7200; Hm_lvt_98beee57fd2ef70ccdd5ca52b9740c49=1594082993,1594085836,1594085890,1594085914; SESSIONID=6dymYJHSifEwQ0zXxC2pazfR666iUbjkEzu1tARL1ko; JOID=VlkUA09Hoa5DYi64CkOkPPa-5DQedMXWKjth8Fguwus1Nx7HUllyqBhnK7kPjXi0IvMslK4UnFdPgakG-BzHID4=; osd=UV0UBUJApa5Fbym8CkWpO_K-4jkZcMXQJzxl8F4jxe81MRPAVll0pR9jK78Ciny0JP4rkK4SkVBLga8L_xjHJjM=; auth_type=d2VjaGF0|1594085933|6ee1983400e4865939000b9a557cc2e8c76c3f2a; atoken=35_hpenPXDo2vC6O9vlEeFY8vDLwI7SymLZSX41p9wi2UIbtL_rGH7rCFSh_xMBqu51JWUSah5p9zd7zJKbz2WSLX15BkSPUwX9mqeIte7JQuY; token="MzVfaHBlblBYRG8ydkM2Tzl2bEVlRlk4dkRMd0k3U3ltTFpTWDQxcDl3aTJVSWJ0TF9yR0g3ckNGU2hfeE1CcXU1MUpXVVNhaDVwOXpkN3pKS2J6MldTTFgxNUJrU1BVd1g5bXFlSXRlN0pRdVk=|1594085933|44aa2c0604cb92c2e5cc27f0c4c1ecd6d53b54d0"; client_id="bzNwMi1qc0dCNGZCM20xTW1IaXhxRjRpenVoSQ==|1594085933|ac472a3a5990ba7557b14788715e3d7953ef1a77"; capsion_ticket="2|1:0|10:1594085933|14:capsion_ticket|44:ZTdmMWY1OTI4MWEyNGUwNThhOTRmNDRiNTE0MzgxNmY=|19732c2b83834edaf31b293efd58bf7d392e2305c5c97fdf99512d28e8284488"; z_c0=Mi4xc1lLUUF3QUFBQUFBQUJ0d3M4T0pFUmNBQUFCaEFsVk5VeUR4WHdBRHIxM25HUVZRbkhlbWpZMzJGRWRTenNmUnN3|1594085971|4b0544a7cea327e1e4d287553bd2aac7823072c9; tst=r; Hm_lpvt_98beee57fd2ef70ccdd5ca52b9740c49=1594085973; unlock_ticket="AGDA9j9lrgoXAAAAYQJVTV3ZA19iTvzcMaJQG4CZ4KhnmMvihJfHbg=="; KLBRSID=af132c66e9ed2b57686ff5c489976b91|1594086051|1594085835'
+            'Cookie': '_zap=24eb86d7-3a80-4f4e-aea8-2e9a9bf04887; d_c0="AAAbcLPDiRGPTo5ABej3BkuCDiznrsxFGSE=|1594082992"; _ga=GA1.2.749585512.1594082993; ISSW=1; _xsrf=SitTm4E7Lwc3FfD9cnDAeRPECt92fDQM; z_c0=Mi4xc1lLUUF3QUFBQUFBQUJ0d3M4T0pFUmNBQUFCaEFsVk5VeUR4WHdBRHIxM25HUVZRbkhlbWpZMzJGRWRTenNmUnN3|1594085971|4b0544a7cea327e1e4d287553bd2aac7823072c9; tst=r; q_c1=808350fd5e0947259bec2e3172c6592f|1598409488000|1594089089000; Hm_lvt_98beee57fd2ef70ccdd5ca52b9740c49=1598409485,1598433995,1599119067,1599126228; Hm_lpvt_98beee57fd2ef70ccdd5ca52b9740c49=1599126228; unlock_ticket="AGDA9j9lrgoXAAAAYQJVTdzBUF9peXe05f0Hk4ETqLxCN7WUUl9efQ=="; SESSIONID=gVePKNj34jjW1yxrS22h2QVheM2dLuOqRznfzqjFXN6; KLBRSID=e42bab774ac0012482937540873c03cf|1599126229|1599126226; JOID=VFgQCkibruNlyFr_TpTdsbqzlXBc-v2KP4YSkHGqwow-8yaBOU0dtTXLWfZIJNx-x3q3reUGbgJpghMnInRESFc=; osd=VV0RC0yaq-JkzFv6T5XZsL-ylHRd__yLO4cXkXCuw4k_8iKAPEwcsTTOWPdMJdl_xn62qOQHagNsgxIjI3FFSVM='
         }
         self.driver = webdriver.Chrome(chrome_options=chrome_options,executable_path='D:/driver/chromedriver.exe')
         self.db = pymysql.connect(host='localhost',user='root',password='123456',port=3306,db='py_test',charset='utf8mb4')
@@ -33,9 +33,9 @@ class ZhiHuSpider():
         for i in range(0,1):
             html = requests.get(url = self.url,headers=self.headers) 
             html.encoding = 'utf-8'   # 网站可能使用gbk或utf-8编码，
-            # print(html.text)
-            # with open('{}.html'.format(i), 'w', encoding='utf-8') as f:
-            #     f.write(html.text)
+            print(html.text)
+            with open('{}.html'.format(i), 'w', encoding='utf-8') as f:
+                f.write(html.text)
             html = etree.HTML(html.text)
             data = html.xpath("//div[@class='Card TopstoryItem TopstoryItem-isRecommend']/div/div")   # 使用#xpath的链接
             for li in data:
@@ -67,8 +67,9 @@ class ZhiHuSpider():
             name = str(item.xpath("./div/div[@class='ContentItem-meta']//a/text()"))
             content = content + name + '------------\n\n'
             article = item.xpath("./div//p/text()")
-            print(article)
+            # print(article)
             for p in article:
+                print(p)
                 content = content + p + '\n\n'
         self.save_items(url, title, content) # 保存数据库
         # article = html.xpath("//div//p/text()")

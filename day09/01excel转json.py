@@ -4,10 +4,10 @@ import requests
 
 def openWorkbook():
     # 读取excel表的数据
-    workbook = xlrd.open_workbook('./专题数据51-85.xlsx')
+    workbook = xlrd.open_workbook('./专题数据51-86.xlsx')
     # 选取需要读取数据的那一页
-    # sheet = workbook.sheet_by_index(0)
-    sheet = workbook.sheet_by_name('视频85')
+    #sheet = workbook.sheet_by_index(1)
+    sheet = workbook.sheet_by_name('视频86')
     # 获得行数
     rows = sheet.nrows
     # 列数列数
