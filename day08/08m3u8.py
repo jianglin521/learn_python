@@ -100,8 +100,8 @@ def downloader(url, name, threadNum):
 
 
 if __name__ == '__main__':
-    threadNum = 20
+    # threadNum = 20
     videoUrl = str(sys.argv[1])
     name = str(sys.argv[2])
-    # threadNum = int(sys.argv[3])
+    threadNum = int(sys.argv[3])
     downloader(videoUrl, name, threadNum)
