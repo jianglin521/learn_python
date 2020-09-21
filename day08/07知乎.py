@@ -33,11 +33,11 @@ class ZhiHuSpider():
         for i in range(0,1):
             html = requests.get(url = self.url,headers=self.headers) 
             html.encoding = 'utf-8'   # 网站可能使用gbk或utf-8编码，
-            print(html.text)
-            with open('{}.html'.format(i), 'w', encoding='utf-8') as f:
-                f.write(html.text)
+            # print(html.text)
+            # with open('{}.html'.format(i), 'w', encoding='utf-8') as f:
+            #     f.write(html.text)
             html = etree.HTML(html.text)
-            data = html.xpath("//div[@class='Card TopstoryItem TopstoryItem--old TopstoryItem-isRecommend']/div/div")  # 使用#xpath的链接
+            data = html.xpath("//div[@class='Card TopstoryItem TopstoryItem--new TopstoryItem-isRecommend']/div/div")  # 使用#xpath的链接
 
             for li in data:
                 title = li.xpath("./h2/div/a/text()")
