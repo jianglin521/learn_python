@@ -9,8 +9,9 @@ finishedNum = 0
 allNum = 0
 fileList = []
 headers = {
-  'Referer': 'https://video.bosum.com.cn/',
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:62.0) Gecko/20100101 Firefox/62.0'
+    'Host':'cd15-ccd1-2.play.bokecc.com',
+    'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:80.0) Gecko/20100101 Firefox/80.0',
+    'Accept-Language':'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2'
 }
 
 
@@ -91,7 +92,7 @@ def downloader(url, name, threadNum):
     for index, downloadLink in enumerate(urls):
         # fileList.append(os.path.basename(downloadLink))
         fileList.append(os.path.basename(str(index) + '.ts'))
-        futures.append(pool.submit(download, downloadLink, f"{downloadPath}/{os.path.basename(str(index) + '.ts')}"))
+        futures.append(pool.submit(download, downloadLink, f"{downloadPath}/{os.path.basename(str(index) + '.txt')}"))
     wait(futures)
     print(f"运行完成")
     merge_file(downloadPath, name)
@@ -100,8 +101,10 @@ def downloader(url, name, threadNum):
 
 
 if __name__ == '__main__':
-    # threadNum = 20
-    videoUrl = str(sys.argv[1])
-    name = str(sys.argv[2])
-    threadNum = int(sys.argv[3])
+    threadNum = 20
+    videoUrl = 'https://cd15-ccd1-2.play.bokecc.com/flvs/0118CC77B985808D/2020-09-17/33A9B943C92932B59C33DC5901307461-20.m3u8?t=1601025469&key=1B72AADDF22186295C9EB5B4E271A4AF&tpl=10&tpt=112'
+    name = '1.mp4'
+    # videoUrl = str(sys.argv[1])
+    # name = str(sys.argv[2])
+    # threadNum = int(sys.argv[3])
     downloader(videoUrl, name, threadNum)
