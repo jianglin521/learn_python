@@ -101,10 +101,8 @@ def downloader(url, name, threadNum):
 
 
 if __name__ == '__main__':
-    threadNum = 20
-    videoUrl = 'https://cd15-ccd1-2.play.bokecc.com/flvs/0118CC77B985808D/2020-09-17/33A9B943C92932B59C33DC5901307461-20.m3u8?t=1601025469&key=1B72AADDF22186295C9EB5B4E271A4AF&tpl=10&tpt=112'
-    name = '1.mp4'
-    # videoUrl = str(sys.argv[1])
-    # name = str(sys.argv[2])
-    # threadNum = int(sys.argv[3])
+    # threadNum = 20
+    videoUrl = str(sys.argv[1])
+    name = str(sys.argv[2])
+    threadNum = int(sys.argv[3])
     downloader(videoUrl, name, threadNum)
