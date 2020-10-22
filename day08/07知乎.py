@@ -37,7 +37,7 @@ class ZhiHuSpider():
             # with open('{}.html'.format(i), 'w', encoding='utf-8') as f:
             #     f.write(html.text)
             html = etree.HTML(html.text)
-            data = html.xpath("//div[@class='Card TopstoryItem TopstoryItem--new TopstoryItem-isRecommend']/div/div")  # 使用#xpath的链接
+            data = html.xpath("//div[@class='Card TopstoryItem TopstoryItem--old TopstoryItem-isRecommend']/div/div")  # 使用#xpath的链接
 
             for li in data:
                 title = li.xpath("./h2/div/a/text()")
