@@ -20,7 +20,7 @@ class ZhiHuSpider():
         self.headers = {
             'X-INFINITESCROLL': 'true',
             "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.110 Safari/537.36",
-            'Cookie': '_zap=24eb86d7-3a80-4f4e-aea8-2e9a9bf04887; d_c0="AAAbcLPDiRGPTo5ABej3BkuCDiznrsxFGSE=|1594082992"; _ga=GA1.2.749585512.1594082993; ISSW=1; _xsrf=SitTm4E7Lwc3FfD9cnDAeRPECt92fDQM; z_c0=Mi4xc1lLUUF3QUFBQUFBQUJ0d3M4T0pFUmNBQUFCaEFsVk5VeUR4WHdBRHIxM25HUVZRbkhlbWpZMzJGRWRTenNmUnN3|1594085971|4b0544a7cea327e1e4d287553bd2aac7823072c9; tst=r; q_c1=808350fd5e0947259bec2e3172c6592f|1598409488000|1594089089000; Hm_lvt_98beee57fd2ef70ccdd5ca52b9740c49=1598409485,1598433995,1599119067,1599126228; Hm_lpvt_98beee57fd2ef70ccdd5ca52b9740c49=1599126228; unlock_ticket="AGDA9j9lrgoXAAAAYQJVTdzBUF9peXe05f0Hk4ETqLxCN7WUUl9efQ=="; SESSIONID=gVePKNj34jjW1yxrS22h2QVheM2dLuOqRznfzqjFXN6; KLBRSID=e42bab774ac0012482937540873c03cf|1599126229|1599126226; JOID=VFgQCkibruNlyFr_TpTdsbqzlXBc-v2KP4YSkHGqwow-8yaBOU0dtTXLWfZIJNx-x3q3reUGbgJpghMnInRESFc=; osd=VV0RC0yaq-JkzFv6T5XZsL-ylHRd__yLO4cXkXCuw4k_8iKAPEwcsTTOWPdMJdl_xn62qOQHagNsgxIjI3FFSVM='
+            'Cookie': '_zap=4400c78d-bb5e-408b-83ee-6eb260144c55; _xsrf=ABjvYnUA45tIdXPNr0rspzFxARUNCrCe; ISSW=1; d_c0="ALCV3hECNRKPTrM5VJbKVqrDe5g04e9t4Y0=|1605574957"; l_n_c=1; r_cap_id="YzI5NzA2MTZmMWFiNGM0NTk5ZjU3ZjQ1N2E4Y2U3NjE=|1605574960|40f9ee1cbbbea409eed0395d4ccb3b7c43222920"; cap_id="ZDljOGY2MzQ2MTQzNGVlODg2YTYyNTgzZGFlY2M2YTM=|1605574960|3011facc9db4ac39e54f0e239c04a480540fdeff"; l_cap_id="OTQ2MTY3NjRiNzVmNDg5NmI3MDZmMTI1M2MxMmJhYWY=|1605574960|c61ca7f5eabc09b50ecaf16380708fb258a4a6d1"; n_c=1; tst=r; q_c1=7f8a0db8573b4b4284759857f1972566|1605575021000|1605575021000; capsion_ticket="2|1:0|10:1605575158|14:capsion_ticket|44:M2ExOTMxY2U3NzZiNDk2M2EzMGVjZGI0YzJlYjAzNmE=|268ea10e95a2fb0f7a3b4c90901cb9be9a1d3c525acef0fcc2fbfccfb269056b"; z_c0=Mi4xc1lLUUF3QUFBQUFBc0pYZUVRSTFFaGNBQUFCaEFsVk5KbkNnWUFDY0FvVDhsaGRXbUo1SlJFUEdRTUdEc0lqX1ln|1605575206|f8c8fbbea9649bc69c57767703269d26d3bde90c; SESSIONID=MskEQWYXFqkhC0h28yAS2OoeesmxxoHN0j4g8WYPYCw; JOID=W1EUA0pUankJ6TvXbF0SINaU8lN1GRETTbBshjUaGxpgqwO_VjTqyl_hM95sONSJx6rv_GEFWmDsIZc26Ze9cOc=; osd=UVAVCkJea3gA4THWbVQaKteV-1t_GBAaRbpthzwSERthogu1VzXjwlXgMtdkMtWIzqLl_WAMUmrtIJ4-45a8ee8=; KLBRSID=d017ffedd50a8c265f0e648afe355952|1605601692|1605599177'
         }
         self.driver = webdriver.Chrome(chrome_options=chrome_options,executable_path='D:/driver/chromedriver.exe')
         self.db = pymysql.connect(host='localhost',user='root',password='123456',port=3306,db='py_test',charset='utf8mb4')
@@ -95,8 +95,10 @@ class ZhiHuSpider():
             self.db.rollback()
 
     def run(self):
-        # 获取url列表数据
+        # 获取u列表数据
         url_list = self.get_url_list()
+        # url = input('请输入链接:')
+        # url_list = [url]
         print(url_list)
         for url in url_list:
             data = self.get_content(url, url_list.index(url) + 1)
