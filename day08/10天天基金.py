@@ -13,10 +13,10 @@ class TiantianSpider():
           'Host': 'fundmobapi.eastmoney.com',
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36'
       }
-      
-      self.code = '160222,501057,001938,161005,161725,320007,003096,160643'
-      self.num = [653.57,514.46,586.78,391.36,99.2,149.25,0,0]
 
+      self.code = '160222,501057,001938,161005,003096,320007,160643,161725'
+      self.num = [769.42,580.93,662.65,432.40,77.6,149.25,182.90,0]
+ 
     def get_content(self):
         url = self.url.format(self.code)
         response = requests.get(url=url,headers=self.headers)
