@@ -14,13 +14,13 @@ class TiantianSpider():
           'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36'
       }
 
-      self.code = '160222,501057,001938,161005,003096,320007,160643,005827,161725'
-      self.num = [885.85,651.86,742.21,475.23,77.6,149.25,182.90,0,0]
- 
+      self.code = '160222,501057,161005,005827,001938,003096,161725'
+      self.num = [1100.17,875.39,837.94,785.61,821.23,111.82,0]
+
     def get_content(self):
         url = self.url.format(self.code)
         response = requests.get(url=url,headers=self.headers)
-        print(response)
+        # print(response)
         data = json.loads(response.text)['data']
         # with open('test.json',"w",encoding='utf-8') as f:
         #     f.write(str(data))
