@@ -12,7 +12,7 @@ import pymysql
 class ZhiHuSpider():
     def __init__(self):
         chrome_options = Options()
-        # chrome_options.add_argument('--headless')  # 使用无头谷歌浏览器模式
+        chrome_options.add_argument('--headless')  # 使用无头谷歌浏览器模式
         chrome_options.add_argument('--disable-gpu')
         chrome_options.add_argument('--no-sandbox')
         self.base_url = 'https://www.zhihu.com/'
