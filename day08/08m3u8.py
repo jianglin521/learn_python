@@ -105,7 +105,7 @@ if __name__ == '__main__':
     videoUrl = 'https://sod.bunediy.com/20210903/9t0Offuo/index.m3u8'         
     name = '20210903.mp4'
 
-    # videoUrl = str(sys.argv[1])
-    # name = str(sys.argv[2])
-    # threadNum = int(sys.argv[3])
+    videoUrl = str(sys.argv[1])
+    name = str(sys.argv[2])
+    threadNum = int(sys.argv[3])
     downloader(videoUrl, name, threadNum)
